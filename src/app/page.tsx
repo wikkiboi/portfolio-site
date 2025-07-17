@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="max-w-prose mx-auto px-4" id="home">
@@ -11,13 +13,13 @@ export default function Home() {
           complex problems{" "}
         </p>
         <div className="mt-12 text-center">
-          <a
-            href="./#projects"
+          <Link
+            href="./projects"
             className="px-12 py-5 text-xs font-bold uppercase rounded-lg border-2 h-full inline-block leading-0.5 transform duration-200 hover:-translate-y-0.5 active:-translate-y-0.25 shadow
             "
           >
             Projects
-          </a>
+          </Link>
         </div>
       </div>
     </main>

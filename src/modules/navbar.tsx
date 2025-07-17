@@ -11,29 +11,26 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center justify-between pl-4 w-full">
-      <div className="flex items-center">
-        <Link
-          href="/"
-          className="flex text-gray-800 hover:text-blue-400 hover:border-blue-400 font-bold text-base my-auto transition-colors cursor-pointer tracking-wide items-center gap-1"
-        >
-          {pathname !== "/" && <ChevronLeft />}
-          Ricky Ho
-        </Link>
-      </div>
-      <ul className="flex">
+    <nav className="flex items-center justify-between py-6 w-full max-sm:flex-col gap-4">
+      <Link
+        href="/"
+        className="flex text-gray-800 font-bold text-xl my-auto transition-colors cursor-pointer tracking-wide items-center border-2 border-transparent hover:border-blue-400 px-2 rounded gap-1 duration-200"
+      >
+        {pathname !== "/" && <ChevronLeft className="max-sm:hidden" />}
+        Ricky Ho
+      </Link>
+
+      <ul className="flex gap-1">
         {navItems.map((section) => {
           const activeStyle =
-            `/${section.toLowerCase()}` === pathname
-              ? "text-blue-400 underline"
-              : "";
+            `/${section.toLowerCase()}` === pathname ? "text-blue-400" : "";
 
           return (
             <li key={section}>
               <Link
                 href={`/${section.toLowerCase()}`}
                 className={cn(
-                  "text-gray-800 hover:text-blue-400 transition-colors font-semibold text-base px-4 py-6 block duration-300",
+                  "text-gray-800 transition-colors font-semibold text-xl rounded px-4 border-2 border-transparent hover:border-blue-400 block duration-200",
                   activeStyle
                 )}
               >

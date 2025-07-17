@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import Navbar from "../modules/navbar";
+import { Toaster } from "sonner";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -21,10 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${figtree.className} antialiased`}>
-      <body className="leading-[1.5] min-h-screen mx-auto">
-        <header className="max-w-prose shadow z-50 bg-white mx-auto mb-4">
+      <body className="min-h-screen">
+        <header className="max-w-prose z-50 bg-background mx-auto mb-4">
           <Navbar />
         </header>
+        <Toaster toastOptions={{ className: `${figtree.className}` }} />
         {children}
       </body>
     </html>
