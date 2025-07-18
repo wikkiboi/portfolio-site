@@ -8,6 +8,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "../components/ui/form";
 import { Input } from "../components/ui/input";
@@ -19,6 +20,7 @@ import { Send } from "lucide-react";
 const schema = z.object({
   name: z.string().min(2, "Name is too short"),
   email: z.email("Invalid email"),
+  subject: z.string().max(100, "Subject is too long"),
   message: z.string().min(10, "Message must be at least 10 characters"),
   // recaptchaToken: z.string().min(1, "Please complete the reCAPTCHA"),
 });
@@ -31,14 +33,36 @@ export default function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      subject: "",
       message: "",
     },
+    mode: "onSubmit",
+    reValidateMode: "onBlur",
   });
 
-  const handleSubmit = (values: z.infer<typeof schema>) => {
-    toast.success("Message successfully sent!");
+  const handleSubmit = async (values: z.infer<typeof schema>) => {
+    const { name, email, subject, message } = values;
+    if (message.length < 10) {
+      toast.error("Message must be at least 10 characters.");
+      return;
+    }
 
-    form.reset();
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+
+      if (response.ok) {
+        toast.success("Message successfully sent!");
+        form.reset();
+        form.clearErrors();
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong.");
+    }
   };
 
   return (
@@ -52,6 +76,7 @@ export default function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
+              <FormLabel className="ml-1 text-xs">Name</FormLabel>
               <FormControl>
                 <Input placeholder="Your Name" {...field} />
               </FormControl>
@@ -64,8 +89,24 @@ export default function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
+              <FormLabel className="ml-1 text-xs">Email</FormLabel>
               <FormControl>
                 <Input placeholder="Your Email" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="ml-1 text-xs gap-1">
+                Subject<span className="m-0 text-gray-400">(optional)</span>
+              </FormLabel>
+              <FormControl>
+                <Input placeholder="Subject" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -76,6 +117,7 @@ export default function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
+              <FormLabel className="ml-1 text-xs">Message</FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Type your message..."
@@ -97,37 +139,3 @@ export default function ContactForm() {
     </Form>
   );
 }
-
-/*
-    <form className="flex flex-col gap-6" method="POST" action="/api/contact">
-      <input
-        {...register("name")}
-        type="text"
-        name="name"
-        required
-        placeholder="Your Name"
-        className="p-3 border rounded-md shadow-sm"
-      />
-      <input
-        {...register("email")}
-        type="email"
-        name="email"
-        required
-        placeholder="Your Email"
-        className="p-3 border rounded-md shadow-sm"
-      />
-      <textarea
-        name="message"
-        required
-        placeholder="Your Message"
-        rows={5}
-        className="p-3 border rounded-md shadow-sm"
-      ></textarea>
-      <button
-        type="submit"
-        className="px-6 py-3 bg-blue-500 text-white rounded-md font-semibold hover:bg-blue-600 transition"
-      >
-        Send Message
-      </button>
-    </form>
-*/

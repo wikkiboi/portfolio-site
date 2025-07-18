@@ -9,15 +9,23 @@ const navItems = ["About", "Projects", "Contact"];
 
 export default function Navbar() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
-    <nav className="flex items-center justify-between py-6 w-full max-sm:flex-col gap-4">
+    <nav className="flex items-center justify-between py-8 w-full max-sm:flex-col gap-4">
       <Link
         href="/"
-        className="flex text-gray-800 font-bold text-xl my-auto transition-colors cursor-pointer tracking-wide items-center border-2 border-transparent hover:border-blue-400 px-2 rounded gap-1 duration-200"
+        className={cn(
+          "flex items-center text-gray-800 font-semibold text-xl my-auto transition-colors cursor-pointer tracking-wide border-2 border-transparent pl-12 pr-4 py-3 rounded gap-1 duration-200 -translate-x-12 max-sm:-translate-x-4",
+          {
+            "hover:border-blue-400": !isHome,
+          }
+        )}
       >
-        {pathname !== "/" && <ChevronLeft className="max-sm:hidden" />}
-        Ricky Ho
+        <div className={`${isHome ? "hidden" : "absolute"} -translate-x-9`}>
+          <ChevronLeft className="size-4 w-6 h-full" />
+        </div>
+        <div>Ricky Ho</div>
       </Link>
 
       <ul className="flex gap-1">
@@ -30,7 +38,7 @@ export default function Navbar() {
               <Link
                 href={`/${section.toLowerCase()}`}
                 className={cn(
-                  "text-gray-800 transition-colors font-semibold text-xl rounded px-4 border-2 border-transparent hover:border-blue-400 block duration-200",
+                  "text-gray-800 transition-colors text-xl rounded px-4 py-0.5 border-2 border-transparent hover:border-blue-400 block duration-200",
                   activeStyle
                 )}
               >
