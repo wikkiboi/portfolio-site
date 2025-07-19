@@ -16,7 +16,7 @@ export default function Navbar() {
       <Link
         href="/"
         className={cn(
-          "flex items-center text-gray-800 font-semibold text-xl my-auto transition-colors cursor-pointer tracking-wide border-2 border-transparent pl-12 pr-4 py-3 rounded gap-1 duration-200 -translate-x-12 max-sm:-translate-x-4",
+          "flex items-center text-gray-800 text-xl my-auto transition-colors cursor-pointer tracking-wide border-2 border-transparent pl-12 pr-4 py-3 rounded gap-1 duration-200 -translate-x-12 max-sm:-translate-x-4",
           {
             "hover:border-blue-400": !isHome,
           }
@@ -25,7 +25,10 @@ export default function Navbar() {
         <div className={`${isHome ? "hidden" : "absolute"} -translate-x-9`}>
           <ChevronLeft className="size-4 w-6 h-full" />
         </div>
-        <div>Ricky Ho</div>
+        <div>
+          <h1 className="text-lg">Ricky Ho</h1>
+          <h2 className="text-lg text-muted-foreground">Software Developer</h2>
+        </div>
       </Link>
 
       <ul className="flex gap-1">
