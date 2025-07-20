@@ -7,7 +7,7 @@ export default function Home() {
         Hey, my name is Ricky Ho
       </h1>
       <div className="mt-12 mx-auto">
-        <p className=" leading-[1.6]">
+        <p className="leading-[1.6]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
           tempora explicabo quae quod deserunt eius sapiente solutions for
           complex problems{" "}

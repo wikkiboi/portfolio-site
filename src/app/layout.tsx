@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${figtree.className} antialiased`}>
       <body className="min-h-screen">
-        <header className="max-w-prose z-50 bg-background mx-auto mb-4">
+        <header className="max-w-prose z-50 bg-background mx-auto">
           <Navbar />
         </header>
         <Toaster toastOptions={{ className: `${figtree.className}` }} />

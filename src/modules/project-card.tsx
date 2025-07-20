@@ -23,25 +23,28 @@ export default function ProjectCard({
   technologies,
 }: ProjectCardProps) {
   return (
-    <div className="mb-12 divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400">
+    <div className="mb-12 divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
       <div className="flex justify-between p-4">
         <h2 className="text-xl">{name}</h2>
         {technologies}
       </div>
       <div>
-        <p>{description}</p>
+        <p className="p-4 text-lg">{description}</p>
       </div>
       {imageUrl && <Image src={imageUrl} alt={`Preview of ${name}`} />}
-      <div className="flex divide-x items-center justify-center">
+      <div className="flex items-center justify-center divide-x divide-zinc-400 dark:divide-zinc-500">
         {url ? (
-          <a href={url} className="flex grow items-center justify-center p-4">
+          <a
+            href={url}
+            className="flex grow items-center justify-center p-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+          >
             <Globe className="mr-1" />
             Visit website
           </a>
         ) : (
           <>
             <a
-              className="flex grow items-center justify-center text-muted-foreground p-4"
+              className="flex grow items-center justify-center text-muted-foreground p-4 cursor-default"
               id="not-available"
             >
               <CircleAlert className="mr-1" /> Visit website
@@ -54,7 +57,7 @@ export default function ProjectCard({
         )}
         <a
           href={githubUrl}
-          className="flex grow items-center justify-center p-4"
+          className="flex grow items-center justify-center p-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
         >
           <GitBranch className="mr-1" />
           View source code

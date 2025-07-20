@@ -12,7 +12,7 @@ export default function Navbar() {
   const isHome = pathname === "/";
 
   return (
-    <nav className="flex items-center justify-between py-8 w-full max-sm:flex-col gap-4">
+    <nav className="flex items-center justify-between py-4 w-full max-sm:flex-col gap-4">
       <Link
         href="/"
         className={cn(
@@ -26,7 +26,7 @@ export default function Navbar() {
           <ChevronLeft className="size-4 w-6 h-full" />
         </div>
         <div>
-          <h1 className="text-lg">Ricky Ho</h1>
+          <h1 className="text-lg max-sm:text-center">Ricky Ho</h1>
           <h2 className="text-lg text-muted-foreground">Software Developer</h2>
         </div>
       </Link>
