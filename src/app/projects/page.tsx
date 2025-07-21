@@ -48,7 +48,7 @@ const projects: Project[] = [
     description:
       "A full-stack messaging platform with direct messaging, server and channel-based communication, friend management, and real-time chat. Users can create or join servers via invite links, manage channels, and join in on conversations across multiple contexts.",
     imageUrl: "",
-    githubUrl: "https://github.com/wikkiboi/talkify",
+    githubUrl: "https://github.com/wikkiboi/talkify-app",
     url: "",
     technologies: (
       <div className="flex flex-row gap-2">

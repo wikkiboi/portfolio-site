@@ -130,7 +130,11 @@ export default function ContactForm() {
           )}
         />
         <div className="flex">
-          <Button type="submit" size="lg" className="flex ml-auto bg-blue-400">
+          <Button
+            type="submit"
+            size="lg"
+            className="flex ml-auto bg-blue-400 hover:bg-blue-500 "
+          >
             <Send />
             Send Message
           </Button>
