@@ -69,7 +69,7 @@ export default function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(handleSubmit)}
-        className="space-y-6 mx-auto"
+        className="space-y-6 mx-auto mb-8"
       >
         <FormField
           control={form.control}
@@ -129,7 +129,13 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <div className="flex">
+        <div className="flex justify-between items-center">
+          <a href="mailto:wikki.rho@gmail.com" className="text-zinc-500">
+            Or email me at:{" "}
+            <span className="underline text-blue-400 hover:text-blue-500">
+              wikki.rho@gmail.com
+            </span>
+          </a>
           <Button
             type="submit"
             size="lg"

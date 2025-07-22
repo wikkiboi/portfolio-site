@@ -15,7 +15,7 @@ const projects: Project[] = [
   {
     name: "zenbu",
     description:
-      "Stay up to date on the latest anime with this index/search app. Browse for currently airing shows, top-ranked titles, and seasonal anime using dynamic filters for type, status, and more. Who knows, you might find your next favorite series here.",
+      "Stay up to date on the latest anime with this index/search app. Browse for airing shows, top-ranked titles, and seasonal anime using dynamic filters for type, status, and more. Who knows, you might find your next favorite series here.",
     imageUrl: "",
     githubUrl: "https://github.com/wikkiboi/zenbu",
     url: "https://zenbu.netlify.app",
@@ -30,7 +30,7 @@ const projects: Project[] = [
   {
     name: "ClipTube",
     description:
-      "A full-featured video-sharing platform where users can create an account and upload/manage videos through a studio interface. Users can also engage with content through subscriptions, playlists, and watch history. It also features video search and basic analytics. Features and UI are heavily referenced from YouTube.",
+      "A full-featured video-sharing platform where you can make an account and upload/manage videos through a studio interface. You can also engage with content through subscriptions, playlists, and watch history. It also features video search and basic analytics. Features and UI are heavily referenced from YouTube.",
     imageUrl: "",
     githubUrl: "https://github.com/wikkiboi/ClipTube",
     url: "https://clip-tube.vercel.app",
