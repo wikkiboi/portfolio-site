@@ -45,7 +45,7 @@ export default function ProjectCard({
         {url ? (
           <a
             href={url}
-            className="flex grow items-center justify-center p-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+            className="flex grow items-center justify-center p-4 transition-all hover:bg-zinc-200 dark:hover:bg-zinc-800"
           >
             <Globe className="mr-1" />
             Visit website
@@ -66,7 +66,7 @@ export default function ProjectCard({
         )}
         <a
           href={githubUrl}
-          className="flex grow items-center justify-center p-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+          className="flex grow items-center justify-center p-4 transition-all hover:bg-zinc-200 dark:hover:bg-zinc-800"
         >
           <GitBranch className="mr-1" />
           View source code

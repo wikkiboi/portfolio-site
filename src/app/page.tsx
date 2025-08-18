@@ -11,7 +11,7 @@ export default function Home() {
         that not only work well but feel nice to use. I really like J-pop,
         TailwindCSS, Tetris, Linux, and clean, smooth UX. I use Arch, btw.
       </p>
-      <div className="divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400">
+      <div className="divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
         <a
           href="https://linkedin.com/in/wikki-rho"
           className="group flex items-center justify-between p-4 transition-all hover:bg-zinc-200 dark:hover:bg-zinc-800"
