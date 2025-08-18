@@ -3,10 +3,11 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import Navbar from "../modules/navbar";
 import { Toaster } from "sonner";
+import ScrollToTopButton from "../components/ui/scroll-to-top-button";
 
 const figtree = Figtree({
-  variable: "--font-figtree",
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
           <Navbar />
         </header>
         <Toaster toastOptions={{ className: `${figtree.className}` }} />
+        <ScrollToTopButton />
         {children}
       </body>
     </html>

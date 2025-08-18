@@ -119,4 +119,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  article p {
+    @apply leading-relaxed text-zinc-600 dark:text-zinc-300/80;
+  }
+
+  article {
+    @apply flex flex-col gap-y-4;
+  }
+
+  article a {
+    @apply text-zinc-950 underline decoration-sky-600 underline-offset-4 dark:text-zinc-200;
+  }
 }
