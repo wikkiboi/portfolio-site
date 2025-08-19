@@ -11,27 +11,26 @@ export default function AboutPage() {
           </a>{" "}
           my whole life. I&apos;ve moved to 5 different cities in the area,
           including San Jose. The internet in the 2010s made it easy to keep in
-          touch with friends, so naturally, I spent a good chunk of time on it
-          and my computer
+          touch with friends, so naturally, I spent a good chunk of my time on
+          my computer.
         </p>
         <p>
-          In middle school, I got into competitive swimming. I won a few medals
+          In my teenage years, I was a competitive swimmer. I won a few medals
           for my local swim team and got pretty obssessed with improving my
-          times. It always felt great seeing my numbers get better over time.
+          times. There was some degree of pride attached to it, but moreso than
+          that, I realized how satisfying it felt to perform at a high level.
           Similarly, I fell into the massive rabbit hole that is{" "}
           <a href="https://en.wikipedia.org/wiki/Osu!">osu!</a>, a rhythm game I
           poured thousands of hours getting good at and hit a peak rank of top
           2,000 global.
         </p>
         <p>
-          I attended{" "}
+          Later on, I studied Statistics at{" "}
           <a href="https://en.wikipedia.org/wiki/University_of_California,_Riverside">
             Univeristy of California Riverside
-          </a>{" "}
-          initially with an undeclared major. I decided on Statistics as my
-          major since I was interested in the problem solving aspect of it. I
-          learned how to work with datasets, analyze them using statistical
-          methods, and how to interpret and present findings.
+          </a>
+          {". "}I learned how to work with datasets, analyze them using
+          statistical methods, and present interpretable findings.
         </p>
         <p>
           The prerequisites for the upper-division courses called for a few
@@ -39,18 +38,22 @@ export default function AboutPage() {
           programming world.
         </p>
         <p>
-          My first ever programming course had me learn{" "}
-          <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a>, where we
-          covered the basic syntax and patterns found in programming languages,
-          like variables, functions, operators, loops, etc.
+          My first ever programming course covered{" "}
+          <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a>, where we went
+          over the basic syntax and patterns in programming languages, like
+          variables, functions, operators, loops, etc.
         </p>
         <p>
-          I got hooked on making functional software and decided to pursue a
-          Computer Science minor. But there&apos;s only so much hands-on
-          programming to do in these courses.
+          Over time, I got hooked on making functional software. I realized the
+          same drive I had for improving swim times and climbing osu! ranks
+          carried over into software. There&apos;s something deeply rewarding
+          about refining an app until it feels smooth, intuitive, and enjoyable
+          to use. I decided to pursue a Computer Science minor and take more
+          related courses, but there was only so much hands-on programming these
+          courses had to offer.
         </p>
         <p>
-          I was looking up different outlets for creating software and came
+          So I looked into different outlets for creating software and came
           across <a href="https://www.freecodecamp.org/">freeCodeCamp&apos;s</a>{" "}
           Responsive Web Design course. I ended up diving deep into the
           Frontend, starting with HTML & CSS, then JavaScript.
@@ -70,10 +73,10 @@ export default function AboutPage() {
           the latter I did in collaboration with 3 other developers.
         </p>
         <p>
-          Creating clean, accessible websites became my newfound passion. I
-          always hold the mindset that these programs are meant to be used by
-          others, which sounds obvious, but there are too many sites I&apos;ve
-          come across that seem to try and make it as unintuitive as possible.
+          Working on projects made me realize how even small design choices can
+          make or break a user&apos;s experience. Just as datasets become most
+          useful when presented clearly, I believe web apps should feel
+          effortless to navigate and accessible to everyone.
         </p>
         <p>
           Right now, I&apos;m studying up on{" "}
@@ -81,9 +84,11 @@ export default function AboutPage() {
             Golang
           </a>{" "}
           since I&apos;ve heard many great things about it. I&apos;ve also been
-          learning more about Docker and its use cases. I&apos;m planning on
-          implementing both in a new project that might be showcased here in the
-          near future, so stay tuned.
+          learning more about{" "}
+          <a href="https://en.wikipedia.org/wiki/Docker_(software)">Docker</a>{" "}
+          and its use cases. I&apos;m planning on implementing both in a new
+          project that might be showcased here in the near future, so stay
+          tuned.
         </p>
         <p>
           If you want to get in touch with me, send me an email at{" "}

@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 import z from "zod";
+import { verifyTurnstile } from "../../../lib/turnstile";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -9,6 +10,7 @@ const contactSchema = z.object({
   email: z.email("Invalid email address"),
   subject: z.string().max(100).optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  turnstileToken: z.string().min(1, "Missing Turnstile token"),
 });
 
 export async function POST(req: Request) {
@@ -23,19 +25,27 @@ export async function POST(req: Request) {
       );
     }
 
-    const { name, email, message, subject } = result.data;
+    const { name, email, message, subject, turnstileToken } = result.data;
 
-    // if (!recaptchaData) {
-    //   return NextResponse.json(
-    //     { error: "Failed reCAPTCHA verification" },
-    //     { status: 400 }
-    //   );
-    // }
+    const ip =
+      req.headers.get("CF-Connecting-IP") ||
+      req.headers.get("X-Forwarded-For") ||
+      "";
+    const verification = await verifyTurnstile(turnstileToken, ip);
+    if (!verification.success) {
+      return NextResponse.json(
+        {
+          error: "Turnstile verification failed",
+          codes: verification["error-codes"],
+        },
+        { status: 400 }
+      );
+    }
 
     const data = await resend.emails.send({
       from: `${name} <${process.env.RESEND_FROM!}>`,
       to: process.env.RESEND_TO!,
-      subject: subject ?? `Contact Form Submission from ${name}`,
+      subject: subject || `Contact Form Submission from ${name}`,
       replyTo: String(email),
       text: String(message),
     });

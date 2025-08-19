@@ -38,7 +38,6 @@ export default function ProjectCard({
           width={800}
           height={0}
           style={{ height: "auto" }}
-          priority
         />
       )}
       <div className="flex items-center justify-center divide-x divide-zinc-400 dark:divide-zinc-500">
