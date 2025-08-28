@@ -59,7 +59,7 @@ const projects: Project[] = [
       "A full-stack messaging platform with direct messaging, server and channel-based communication, friend management, and real-time chat. Users can create or join servers via invite links, manage channels, and join in on conversations across multiple contexts.",
     imageUrl: "/logos/talkify.webp",
     githubUrl: "https://github.com/wikkiboi/talkify-app",
-    url: "",
+    url: "https://talkify.duckdns.org",
     technologies: (
       <div className="flex flex-row gap-2">
         <ToolIcon className="bg-[#00D8FE] ring-1 ring-zinc-500">React</ToolIcon>

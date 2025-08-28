@@ -45,6 +45,8 @@ export default function ProjectCard({
           <a
             href={url}
             className="flex grow items-center justify-center p-4 transition-all hover:bg-zinc-200 dark:hover:bg-zinc-800"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Globe className="mr-1" />
             Visit website

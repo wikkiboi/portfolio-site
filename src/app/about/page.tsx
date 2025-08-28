@@ -10,30 +10,31 @@ export default function AboutPage() {
             San Francisco Bay Area
           </a>{" "}
           my whole life. I&apos;ve moved to 5 different cities in the area,
-          including San Jose. The internet in the 2010s made it easy to keep in
-          touch with friends, so naturally, I spent a good chunk of my time on
-          my computer.
+          including San Jose. Even with the constant moving, the rise of
+          internet in the 2010s made it easy to keep in touch with friends, so I
+          naturally spent a lot of time on my computer.
         </p>
         <p>
-          In my teenage years, I was a competitive swimmer. I won a few medals
-          for my local swim team and got pretty obssessed with improving my
-          times. There was some degree of pride attached to it, but moreso than
-          that, I realized how satisfying it felt to perform at a high level.
-          Similarly, I fell into the massive rabbit hole that is{" "}
-          <a href="https://en.wikipedia.org/wiki/Osu!">osu!</a>, a rhythm game I
-          poured thousands of hours getting good at and hit a peak rank of top
-          2,000 global.
+          In my teenage years, I got into competitive swimming. I won a few
+          medals for my local swim team and got pretty obssessed with improving
+          my times. There was some degree of pride attached to it, but moreso
+          than that, I loved the feeling of control I had when performing at a
+          high level — like every part of my body moved how I wanted it to. For
+          the same reason, I also fell into the massive rabbit hole that is{" "}
+          <a href="https://en.wikipedia.org/wiki/Osu!">osu!</a>, a PC rhythm
+          game I poured thousands of hours getting good at and hit a peak rank
+          of top 2,000 global.
         </p>
         <p>
           Later on, I studied Statistics at{" "}
           <a href="https://en.wikipedia.org/wiki/University_of_California,_Riverside">
             Univeristy of California Riverside
           </a>
-          {". "}I learned how to work with datasets, analyze them using
-          statistical methods, and present interpretable findings.
+          {". "}I learned how to work with datasets, use statistical methods to
+          analyze them, and present interpretable findings with them.
         </p>
         <p>
-          The prerequisites for the upper-division courses called for a few
+          The prerequisites for my upper-division courses called for a few
           Computer Science courses, which prompted my first contact with the
           programming world.
         </p>
@@ -74,9 +75,9 @@ export default function AboutPage() {
         </p>
         <p>
           Working on projects made me realize how even small design choices can
-          make or break a user&apos;s experience. Just as datasets become most
-          useful when presented clearly, I believe web apps should feel
-          effortless to navigate and accessible to everyone.
+          make or break a user&apos;s experience. Just like how datasets become
+          most useful when presented clearly in Statistics, I believe web apps
+          should feel effortless to navigate and accessible to everyone.
         </p>
         <p>
           Right now, I&apos;m studying up on{" "}
@@ -84,10 +85,10 @@ export default function AboutPage() {
             Golang
           </a>{" "}
           since I&apos;ve heard many great things about it. I&apos;ve also been
-          learning more about{" "}
-          <a href="https://en.wikipedia.org/wiki/Docker_(software)">Docker</a>{" "}
-          and its use cases. I&apos;m planning on implementing both in a new
-          project that might be showcased here in the near future, so stay
+          learning more about more DevOps-oriented things like{" "}
+          <a href="https://en.wikipedia.org/wiki/Docker_(software)">Docker</a>,
+          CI/CD, and cloud services. I&apos;m planning on implementing these in
+          a new project that might be showcased here in the near future, so stay
           tuned.
         </p>
         <p>

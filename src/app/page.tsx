@@ -15,6 +15,8 @@ export default function Home() {
         <a
           href="https://linkedin.com/in/wikki-rho"
           className="group flex items-center justify-between p-4 transition-all hover:bg-zinc-200 dark:hover:bg-zinc-800"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span className="flex items-center gap-3">
             <SiLinkedin className="fill-[#0077B5] dark:fill-zinc-200" />
@@ -31,6 +33,8 @@ export default function Home() {
         <a
           href="https://github.com/wikkiboi"
           className="group flex items-center justify-between p-4 transition-all hover:bg-zinc-200 dark:hover:bg-zinc-800"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span className="flex items-center gap-3">
             <SiGithub />
