@@ -38,8 +38,9 @@ export default function RootLayout({
           <ScrollToTopButton />
           {children}
         </ThemeProvider>
-        <footer className="mx-auto flex max-w-prose flex-col max-sm:items-start items-center gap-2 py-6 text-sm text-zinc-500 dark:text-zinc-400">
-          © 2025 Ricky Ho
+        <footer className="mx-auto flex max-w-prose flex-col items-center gap-2 py-6 text-sm text-zinc-500 dark:text-zinc-400">
+          <span>© 2025 Ricky Ho</span>
+          <span>hey, good work today :)</span>
         </footer>
       </body>
     </html>

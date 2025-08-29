@@ -40,14 +40,16 @@ const projects: Project[] = [
     url: "https://clip-tube.vercel.app",
     technologies: (
       <div className="flex flex-row gap-2">
-        <ToolIcon className="bg-[#007ACC] text-zinc-100 ring-1 ring-zinc-500">
+        <ToolIcon className="bg-[#007ACC] text-zinc-100 ring-1 ring-zinc-500 max-sm:text-[11px] my-auto">
           TypeScript
         </ToolIcon>
-        <ToolIcon className="bg-black text-zinc-100 ring-1 ring-zinc-500">
+        <ToolIcon className="bg-black text-zinc-100 ring-1 ring-zinc-500 max-sm:text-[11px] my-auto">
           Next.js
         </ToolIcon>
-        <ToolIcon className="ring-1 ring-zinc-300">ShadCN</ToolIcon>
-        <ToolIcon className="bg-[#2F6792] text-zinc-100 ring-1 ring-zinc-500">
+        <ToolIcon className="ring-1 ring-zinc-300 max-sm:text-[11px] my-auto">
+          ShadCN
+        </ToolIcon>
+        <ToolIcon className="bg-[#2F6792] text-zinc-100 ring-1 ring-zinc-500 max-sm:text-[11px] my-auto">
           PostgreSQL
         </ToolIcon>
       </div>
@@ -62,14 +64,16 @@ const projects: Project[] = [
     url: "https://talkify.duckdns.org",
     technologies: (
       <div className="flex flex-row gap-2">
-        <ToolIcon className="bg-[#00D8FE] ring-1 ring-zinc-500">React</ToolIcon>
-        <ToolIcon className="bg-[#2B2A34] text-zinc-100 ring-1 ring-zinc-500">
+        <ToolIcon className="bg-[#00D8FE] ring-1 ring-zinc-500 max-sm:text-[11px] my-auto">
+          React
+        </ToolIcon>
+        <ToolIcon className="bg-[#2B2A34] text-zinc-100 ring-1 ring-zinc-500 max-sm:text-[11px] my-auto">
           Express
         </ToolIcon>
-        <ToolIcon className="bg-[#25706B] text-zinc-50 ring-1 ring-zinc-500">
+        <ToolIcon className="bg-[#25706B] text-zinc-50 ring-1 ring-zinc-500 max-sm:text-[11px] my-auto">
           Socket.IO
         </ToolIcon>
-        <ToolIcon className="bg-[#10AA57] ring-1 ring-zinc-500">
+        <ToolIcon className="bg-[#10AA57] ring-1 ring-zinc-500 max-sm:text-[11px] my-auto">
           MongoDB
         </ToolIcon>
       </div>

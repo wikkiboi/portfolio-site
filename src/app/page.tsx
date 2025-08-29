@@ -75,10 +75,10 @@ export default function Home() {
         </Link>
         <Link
           href="./projects"
-          className="flex flex-row items-center justify-center gap-1 rounded bg-sky-300 p-3 text-sky-800 ring-1 ring-sky-500 transition-colors sm:hover:bg-sky-400 dark:bg-inherit dark:text-sky-500 dark:ring-sky-500 sm:sm:dark:hover:bg-zinc-800"
+          className="flex items-center justify-center gap-1 rounded bg-blue-400 hover:bg-blue-500 p-3 transition-colors text-white dark:text-zinc-800"
         >
-          <Eye strokeWidth={1.4} className="size-5 max-sm:hidden" />
-          <span className="text-nowrap">View my Work</span>
+          <Eye strokeWidth={1.4} className="size-5" />
+          View my Work
         </Link>
       </div>
     </main>
